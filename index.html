@@ -1,177 +1,598 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noble Pipe & Supply | PVF Supplier Houston</title>
+  <meta
+    name="description"
+    content="Noble Pipe & Supply provides pipe, valves, fittings, bolts, and gaskets for contractors, plants, and industrial projects across Houston and the Gulf Coast."
+  />
+  <style>
+    :root {
+      --bg: #0f1720;
+      --bg-2: #16212b;
+      --panel: #1d2a35;
+      --text: #f4f4f4;
+      --muted: #c7d0d8;
+      --gold: #d4af37;
+      --gold-dark: #b89222;
+      --white: #ffffff;
+      --border: rgba(255, 255, 255, 0.12);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      --max: 1180px;
+    }
 
-<title>Noble Pipe & Supply | PVF Supplier Houston</title>
+    * {
+      box-sizing: border-box;
+    }
 
-<meta name="description" content="Pipe, Valves, Fittings, Bolts and Gaskets for industrial contractors and plants across Houston and the Gulf Coast.">
+    html {
+      scroll-behavior: smooth;
+    }
 
-<style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
 
-body{
-font-family:Arial;
-margin:0;
-background:#0e1a26;
-color:white;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.hero{
-background:url("https://images.unsplash.com/photo-1581092160610-7c1fbe3df3c4") center/cover;
-padding:120px 20px;
-text-align:center;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.hero h1{
-font-size:50px;
-margin-bottom:10px;
-}
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-.hero p{
-font-size:20px;
-}
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10, 15, 20, 0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
 
-.section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
-}
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
 
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-.product{
-background:#1e2d3b;
-padding:25px;
-border-radius:6px;
-text-align:center;
-}
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 50%;
+      padding: 4px;
+    }
 
-.team{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.1;
+    }
 
-.member{
-background:#1e2d3b;
-padding:25px;
-border-radius:6px;
-}
+    .brand-text p {
+      margin: 4px 0 0;
+      color: var(--gold);
+      font-size: 0.92rem;
+      font-weight: bold;
+    }
 
-footer{
-background:black;
-padding:30px;
-text-align:center;
-}
+    .nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-a{color:#d4af37}
+    .nav a {
+      color: var(--muted);
+      font-weight: 600;
+    }
 
-</style>
+    .nav a:hover {
+      color: var(--gold);
+    }
 
+    .hero {
+      position: relative;
+      min-height: 700px;
+      background:
+        linear-gradient(rgba(7, 11, 15, 0.68), rgba(7, 11, 15, 0.76)),
+        url("https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 999px;
+      color: var(--gold);
+      background: rgba(212, 175, 55, 0.08);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: clamp(2.5rem, 4.6vw, 4.3rem);
+      line-height: 1.05;
+    }
+
+    .hero-copy {
+      margin-top: 22px;
+      max-width: 720px;
+      color: #e3e7ea;
+      font-size: 1.15rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-dark);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-note {
+      margin-top: 24px;
+      color: #d6dce2;
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .portrait-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      max-width: 420px;
+      margin-left: auto;
+    }
+
+    .portrait-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .quote-strip {
+      background: rgba(8, 12, 17, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .quote-strip .container {
+      padding: 18px 0;
+      color: #f0f3f6;
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+
+    .quote-strip span {
+      color: var(--gold);
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .light {
+      background: #f3f0eb;
+      color: #1a2128;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: 2.2rem;
+      line-height: 1.1;
+    }
+
+    .section-copy {
+      max-width: 850px;
+      margin: 0;
+      color: #42505d;
+      font-size: 1.05rem;
+    }
+
+    .products-grid,
+    .why-grid,
+    .team-grid {
+      display: grid;
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .why-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid rgba(16, 24, 32, 0.08);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(12, 18, 24, 0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      color: #18222c;
+    }
+
+    .card p {
+      margin: 0;
+      color: #51606d;
+    }
+
+    .dark-section {
+      background: linear-gradient(180deg, var(--bg-2), var(--bg));
+    }
+
+    .dark-section .section-copy {
+      color: #c9d2da;
+    }
+
+    .dark-panel {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .dark-panel h3 {
+      margin: 0 0 10px;
+      color: #fff;
+    }
+
+    .dark-panel p {
+      margin: 0;
+      color: #d1d7dd;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .contact-left ul {
+      padding-left: 18px;
+      margin: 16px 0 0;
+      color: #d1d7dd;
+    }
+
+    .contact-box {
+      background: #fff;
+      color: #16202a;
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box h3 {
+      margin-top: 0;
+      font-size: 1.35rem;
+    }
+
+    .contact-box .label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #7f8d99;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .contact-box .value {
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: #16202a;
+    }
+
+    .contact-box .value a {
+      color: #16202a;
+    }
+
+    .contact-box .value a:hover {
+      color: var(--gold-dark);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 22px 0 28px;
+      background: #0b1117;
+      color: #bfc8cf;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .contact-grid,
+      .products-grid,
+      .why-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-card {
+        margin: 0 auto;
+        max-width: 420px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand-text h1 {
+        font-size: 1.25rem;
+      }
+
+      .hero h2 {
+        font-size: 2.25rem;
+      }
+
+      .hero-copy {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Noble Pipe & Supply logo" />
+        <div class="brand-text">
+          <h1>Noble Pipe &amp; Supply</h1>
+          <p>Built on Integrity</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#why-noble">Why Noble</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="hero">
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">100% Woman-Owned PVF Supplier</div>
+          <h2>PVF Supply for Contractors, Plants &amp; Industrial Projects</h2>
+          <p class="hero-copy">
+            Noble Pipe &amp; Supply provides pipe, valves, fittings, bolts, and gaskets for contractors and industrial facilities across Houston and the Gulf Coast. Built on integrity and backed by real field experience.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Request a Quote</a>
+            <a class="btn btn-secondary" href="#products">View Product Line</a>
+          </div>
+          <div class="hero-note">Serving Contractors • Plants • Industrial Facilities</div>
+        </div>
 
-<h1>Noble Pipe & Supply</h1>
+        <div class="portrait-card">
+          <img src="tonya.jpg" alt="Tonya Adams, Owner and CEO of Noble Pipe & Supply" />
+        </div>
+      </div>
+    </section>
 
-<p>PVF Supply for Contractors, Plants & Industrial Projects</p>
+    <div class="quote-strip">
+      <div class="container">
+        Send quotes to <span>Sales@NoblePVF.com</span> for bid packages, material lists, and immediate needs.
+      </div>
+    </div>
 
-<p>Serving Houston & The Gulf Coast</p>
+    <section id="about" class="light">
+      <div class="container">
+        <h2 class="section-title">Built from the field, not from a desk.</h2>
+        <p class="section-copy">
+          Noble Pipe &amp; Supply was built by people who understand what happens when the wrong material shows up late, incomplete, or undocumented. Our team comes from real field experience and understands urgency, accountability, and contractor expectations.
+        </p>
+      </div>
+    </section>
 
-</div>
+    <section id="products" class="light" style="padding-top: 0;">
+      <div class="container">
+        <h2 class="section-title">Industrial Product Line</h2>
+        <p class="section-copy">
+          Noble Pipe &amp; Supply supports contractors and industrial customers with core PVF materials, specialty items, and hard-to-find products.
+        </p>
 
-<div class="section">
+        <div class="products-grid">
+          <div class="card">
+            <h3>Pipe</h3>
+            <p>CS, SS, Galv, Alloy, and Exotic pipe for industrial and plant applications.</p>
+          </div>
+          <div class="card">
+            <h3>Flanges &amp; Fittings</h3>
+            <p>Standard and specialty flanges and fittings to support fabrication and installation needs.</p>
+          </div>
+          <div class="card">
+            <h3>Valves</h3>
+            <p>Ball, gate, globe, check, butterfly, control, relief, actuated, and specialty valve options.</p>
+          </div>
+          <div class="card">
+            <h3>Bolts &amp; Fasteners</h3>
+            <p>Stud bolts, U-bolts, all-thread rod, and various fastening products for field and shop use.</p>
+          </div>
+          <div class="card">
+            <h3>Gaskets &amp; Sealing</h3>
+            <p>Gaskets and sealing products selected for industrial service conditions and performance needs.</p>
+          </div>
+          <div class="card">
+            <h3>Structural &amp; Support Items</h3>
+            <p>I-beam, structural steel, pipe supports, coated materials, and hard-to-find items.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h2>Products</h2>
+    <section id="why-noble" class="dark-section">
+      <div class="container">
+        <h2 class="section-title">Why Noble</h2>
+        <p class="section-copy">
+          Knowledge forged in the field. We understand the materials we supply because we have worked with them in real service conditions.
+        </p>
 
-<div class="products">
+        <div class="why-grid">
+          <div class="dark-panel">
+            <h3>Spec-Focused</h3>
+            <p>We understand what inspectors look for and what gets rejected.</p>
+          </div>
+          <div class="dark-panel">
+            <h3>Schedule-Driven</h3>
+            <p>Clear communication. Reliable delivery. No surprises.</p>
+          </div>
+          <div class="dark-panel">
+            <h3>Application-Based Supply</h3>
+            <p>Material selected with service conditions and performance in mind.</p>
+          </div>
+          <div class="dark-panel">
+            <h3>Relationship Built</h3>
+            <p>We believe strong projects are built on strong partnerships with customers, vendors, and employees alike.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="product">Pipe</div>
+    <section id="contact" class="dark-section">
+      <div class="container">
+        <h2 class="section-title">Request a Quote</h2>
+        <p class="section-copy">
+          Send bid lists, takeoffs, valve schedules, and material requests to our sales team.
+        </p>
 
-<div class="product">Valves</div>
+        <div class="contact-grid">
+          <div class="contact-left dark-panel">
+            <h3>What customers can send</h3>
+            <ul>
+              <li>Material lists</li>
+              <li>Bid packages</li>
+              <li>Valve schedules</li>
+              <li>Takeoffs</li>
+            </ul>
+          </div>
 
-<div class="product">Fittings</div>
+          <div class="contact-box">
+            <div class="label">Send Quotes To</div>
+            <div class="value"><a href="mailto:Sales@NoblePVF.com">Sales@NoblePVF.com</a></div>
 
-<div class="product">Stud Bolts</div>
+            <div class="label">Tonya Adams — Owner / CEO</div>
+            <div class="value">
+              <a href="tel:2816910202">281-691-0202</a><br />
+              <a href="mailto:Tonya@NoblePVF.com">Tonya@NoblePVF.com</a>
+            </div>
 
-<div class="product">Gaskets</div>
+            <div class="label">Lance Mata — Operations Manager</div>
+            <div class="value">
+              <a href="tel:2818147683">281-814-7683</a><br />
+              <a href="mailto:Lance@NoblePVF.com">Lance@NoblePVF.com</a>
+            </div>
 
-<div class="product">Industrial Supply</div>
+            <div class="label">Daniel Adams — General Manager</div>
+            <div class="value">
+              <a href="tel:2819359019">281-935-9019</a><br />
+              <a href="mailto:Daniel@NoblePVF.com">Daniel@NoblePVF.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Leadership</h2>
-
-<div class="team">
-
-<div class="member">
-
-<h3>Tonya Adams</h3>
-
-Owner / CEO<br>
-281-691-0202<br>
-Tonya@NoblePVF.com
-
-</div>
-
-<div class="member">
-
-<h3>Lance Mata</h3>
-
-Operations Manager<br>
-281-814-7683<br>
-Lance@NoblePVF.com
-
-</div>
-
-<div class="member">
-
-<h3>Daniel Adams</h3>
-
-General Manager<br>
-281-935-9019<br>
-Daniel@NoblePVF.com
-
-</div>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Request a Quote</h2>
-
-Send RFQs to:
-
-<p>
-
-<a href="mailto:Sales@NoblePVF.com">
-
-Sales@NoblePVF.com
-
-</a>
-
-</p>
-
-</div>
-
-<footer>
-
-Noble Pipe & Supply<br>
-
-Houston • Gulf Coast Industrial Supply
-
-</footer>
-
+  <footer>
+    Noble Pipe &amp; Supply • Houston • Gulf Coast Industrial Supply
+  </footer>
 </body>
 </html>
