@@ -1,4 +1,4 @@
-export default function NoblePipeWebsite() {
+index.jsx export default function NoblePipeWebsite() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <header className="border-b border-slate-800 bg-slate-950/95 backdrop-blur sticky top-0 z-50 text-white">
